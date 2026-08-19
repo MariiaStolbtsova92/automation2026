@@ -10,10 +10,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-    image: mcr.microsoft.com/playwright:v1.62.0-noble
-env:
-  HTTP_USERNAME: ${{ secrets.HTTP_USERNAME }}
-  HTTP_PASSWORD: ${{ secrets.HTTP_PASSWORD }}
+      image: mcr.microsoft.com/playwright:v1.62.0-noble
+    env:
+      HTTP_USERNAME: ${{ secrets.HTTP_USERNAME }}
+      HTTP_PASSWORD: ${{ secrets.HTTP_PASSWORD }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
